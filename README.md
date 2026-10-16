@@ -25,4 +25,29 @@ https://wokwi.com/projects/478056834107943937
     delay(500);
     } 
 
+The code below is for the diagram.json of the Smart Irrigation Simulator
 
+    {
+      "version": 1,
+      "author": "Akash Bhat",
+      "editor": "wokwi",
+      "parts": [
+        { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+        {
+          "type": "wokwi-led",
+          "id": "led1",
+          "top": -61.2,
+          "left": -101.8,
+          "attrs": { "color": "red" }
+        },
+        { "type": "wokwi-potentiometer", "id": "pot1", "top": 104.3, "left": -105.8, "attrs": {} }
+      ],
+      "connections": [
+        [ "led1:A", "uno:13", "green", [ "v0" ] ],
+        [ "led1:C", "uno:GND.1", "green", [ "v0" ] ],
+        [ "pot1:VCC", "uno:5V", "red", [ "v0" ] ],
+        [ "pot1:GND", "uno:GND.2", "black", [ "v0" ] ],
+        [ "pot1:SIG", "uno:A0", "green", [ "v0" ] ]
+      ],
+      "dependencies": {}
+    }
